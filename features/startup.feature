@@ -1,0 +1,15 @@
+
+Feature: Starting up vpt2
+
+    Scenario: start up program
+	Given vpt starts
+	Then a window with the title 'Virtual Page Turner 2' should be seen
+	And a Program class exists
+
+    Scenario: Selecting a piece
+	Given vpt starts
+	And there is no prior selection
+	When I select a piece
+	Then the prior selection is set
+
+    
